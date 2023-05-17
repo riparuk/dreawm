@@ -15,11 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/blog', function () {
-    return view('blog');
+    if (Auth::check()) {
+        // Pengguna telah terautentikasi
+        return view('home');
+    } else {
+        // Pengguna belum terautentikasi
+        return view('welcome');
+    }
 });
 
 Route::get('/dashboard', function () {
