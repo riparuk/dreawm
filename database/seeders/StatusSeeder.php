@@ -13,6 +13,12 @@ class StatusSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Status::create([
+            'name' => 'Achieved',
+        ]);
+
+        Status::create([
+            'name' => 'In Progress',
+        ]);
     }
 }
