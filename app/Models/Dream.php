@@ -28,4 +28,9 @@ class Dream extends Model
     {
         return $this->hasMany(Progress::class);
     }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
