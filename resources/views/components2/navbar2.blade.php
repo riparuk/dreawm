@@ -57,22 +57,17 @@
             Create new item
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <a data-tooltip-target="tooltip-settings" type="button"
+        <a href="{{ route('mydream') }}" data-tooltip-target="tooltip-settings" type="button"
             class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-            <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path
-                    d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z">
-                </path>
-            </svg>
-            <span class="sr-only">Settings</span>
+            <i class="fa-duotone fa-list text-gray-600 text-2xl pr-1 pt-1 float-right"></i>
+            <span class="sr-only">My Dream</span>
         </a>
         <div id="tooltip-settings" role="tooltip"
             class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-            Settings
+            My Dream
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <a data-tooltip-target="tooltip-profile" type="button"
+        <a href="{{ route('profile.edit') }}" data-tooltip-target="tooltip-profile" type="button"
             class="inline-flex flex-col items-center justify-center px-5 rounded-r-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
             <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -93,8 +88,8 @@
 
 <div class="w-0 md:w-1/4 lg:w-1/5 h-0 md:h-screen overflow-y-hidden bg-white shadow-lg">
     <div class="p-5 bg-white sticky top-0">
-        <img class="border border-indigo-100 shadow-lg round"
-            src="http://lilithaengineering.co.za/wp-content/uploads/2017/08/person-placeholder.jpg">
+        {{-- <img class="border border-indigo-100 shadow-lg round"
+            src="http://lilithaengineering.co.za/wp-content/uploads/2017/08/person-placeholder.jpg"> --}}
         <div class="pt-2 border-t mt-5 w-full text-center text-xl text-gray-600">
             {{ auth()->user()->name }}
         </div>
@@ -106,6 +101,8 @@
         {{-- <a class="hover:bg-gray-300 bg-gray-200 border-t-2 p-3 w-full text-xl text-left text-gray-600 font-semibold" href=""><i class="fa fa-comment text-gray-600 text-2xl pr-1 pt-1 float-right"></i>Messages</a> --}}
         <a class="hover:bg-gray-300 bg-gray-200 border-t-2 p-3 w-full text-xl text-left text-gray-600 font-semibold"
             href="/#main"><i class="fa fa-home text-gray-600 text-2xl pr-1 pt-1 float-right"></i>Home</a>
+        <a class="hover:bg-gray-300 bg-gray-200 border-t-2 p-3 w-full text-xl text-left text-gray-600 font-semibold"
+            href="{{ route('mydream') }}"><i class="fa-duotone fa-list text-gray-600 text-2xl pr-1 pt-1 float-right"></i>My Dreawm</a>
         <a class="hover:bg-gray-300 bg-gray-200 border-t-2 p-3 w-full text-xl text-left text-gray-600 font-semibold"
             href="{{ route('profile.edit') }}"><i
                 class="fa fa-cog text-gray-600 text-2xl pr-1 pt-1 float-right"></i>Settings</a>

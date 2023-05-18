@@ -27,6 +27,13 @@ class DreamController extends Controller
         }
     }
 
+    public function mydream()
+    {
+        $dreams = Auth::user()->dreams;
+
+        return view('dream.mydreams', compact('dreams'));
+    }
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([

@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/dreamStore', [DreamController::class, 'store'])->name('dream.store');
     Route::post('progressStore', [ProgressController::class, 'store'])->name('progress.store');
+    Route::get('/mydream', [DreamController::class, 'mydream'])->name('mydream');
 });
 
 require __DIR__.'/auth.php';
