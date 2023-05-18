@@ -13,5 +13,5 @@
 - Jalankan perintah `php artisan serve` untuk menjalankan server lokal
 - Jalankan perintah `npm run dev` untuk menjalankan server node.js
 
-## Screemshot
+## Screenshot
 ![Screenshot](AppScreenshot.png)
