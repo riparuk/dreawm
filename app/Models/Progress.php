@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Progress extends Model
 {
     use HasFactory;
+
+    public function dream()
+    {
+        return $this->belongsTo(Dream::class);
+    }
 }

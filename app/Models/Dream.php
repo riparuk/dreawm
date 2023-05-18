@@ -23,4 +23,9 @@ class Dream extends Model
     {
         return $this->belongsTo(Status::class);
     }
+
+    public function progress()
+    {
+        return $this->hasMany(Progress::class);
+    }
 }

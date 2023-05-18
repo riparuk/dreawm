@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('progress', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedBigInteger('dream_id');
             $table->timestamps();
+
+            $table->foreign('dream_id')->references('id')->on('dreams');
         });
     }
 
