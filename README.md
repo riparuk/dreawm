@@ -1,4 +1,4 @@
-##Dreawm adalah platform yang menyediakan fitur menulis impian dan explorasi impian orang-orang
+## Dreawm adalah platform yang menyediakan fitur menulis impian dan explorasi impian orang-orang
 
 ### Cara menjalankan (Harap Baca!) : 
 - Clone repo, ketik : 
@@ -13,3 +13,5 @@
 - Jalankan perintah `php artisan serve` untuk menjalankan server lokal
 - Jalankan perintah `npm run dev` untuk menjalankan server node.js
 
+## Screemshot
+![Screenshot](AppScreenshot.png)
