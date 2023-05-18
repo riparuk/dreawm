@@ -18,4 +18,9 @@ class Dream extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
 }
