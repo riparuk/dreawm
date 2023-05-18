@@ -57,7 +57,7 @@
             Create new item
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-        <a href="{{ route('mydream') }}" data-tooltip-target="tooltip-settings" type="button"
+        <a href="{{ route('mydreams') }}" data-tooltip-target="tooltip-settings" type="button"
             class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
             <i class="fa-duotone fa-list text-gray-600 text-2xl pr-1 pt-1 float-right"></i>
             <span class="sr-only">My Dream</span>
@@ -102,7 +102,7 @@
         <a class="hover:bg-gray-300 bg-gray-200 border-t-2 p-3 w-full text-xl text-left text-gray-600 font-semibold"
             href="/#main"><i class="fa fa-home text-gray-600 text-2xl pr-1 pt-1 float-right"></i>Home</a>
         <a class="hover:bg-gray-300 bg-gray-200 border-t-2 p-3 w-full text-xl text-left text-gray-600 font-semibold"
-            href="{{ route('mydream') }}"><i class="fa-duotone fa-list text-gray-600 text-2xl pr-1 pt-1 float-right"></i>My Dreawm</a>
+            href="{{ route('mydreams') }}"><i class="fa-duotone fa-list text-gray-600 text-2xl pr-1 pt-1 float-right"></i>My Dreawm</a>
         <a class="hover:bg-gray-300 bg-gray-200 border-t-2 p-3 w-full text-xl text-left text-gray-600 font-semibold"
             href="{{ route('profile.edit') }}"><i
                 class="fa fa-cog text-gray-600 text-2xl pr-1 pt-1 float-right"></i>Settings</a>

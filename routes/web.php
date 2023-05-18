@@ -30,7 +30,8 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/dreamStore', [DreamController::class, 'store'])->name('dream.store');
     Route::post('progressStore', [ProgressController::class, 'store'])->name('progress.store');
-    Route::get('/mydream', [DreamController::class, 'mydream'])->name('mydream');
+    Route::delete('/deleteDream/{id}', [DreamController::class, 'destroy'])->name('dream.destroy');
+    Route::get('/mydreams', [DreamController::class, 'mydreams'])->name('mydreams');
 });
 
 require __DIR__.'/auth.php';

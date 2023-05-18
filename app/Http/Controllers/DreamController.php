@@ -27,7 +27,7 @@ class DreamController extends Controller
         }
     }
 
-    public function mydream()
+    public function mydreams()
     {
         $dreams = Auth::user()->dreams;
 
@@ -76,5 +76,23 @@ class DreamController extends Controller
         $dream = Dream::findOrFail($id);
 
         return view('dream.show', compact('dream'));
+    }
+
+    public function destroy($id)
+    {
+        $dream = Dream::findOrFail($id);
+        if ($dream->user_id !== Auth::id()) {
+            // Jika tidak ada hubungan, lakukan penanganan yang sesuai, misalnya mengembalikan response dengan error
+            return response()->json(['error' => 'Dream not found or unauthorized.'], 403);
+        }
+        $dream->progress()->delete();
+        // Hapus file gambar lama dari server
+        Storage::delete('public/dream_images/' . $dream->image);
+
+        // Hapus dream
+        $dream->delete();
+
+        // Redirect ke halaman daftar produk
+        return redirect()->route('mydreams');
     }
 }
